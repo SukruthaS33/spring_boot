@@ -6,27 +6,27 @@ import org.springframework.stereotype.Component;
 
 import jakarta.annotation.PostConstruct;
 
-
+@Component
 public class ClassA {
 
 	@Lazy
 	@Autowired
 	ClassB classB;
-	
+
 	public String message;
 
 	static {
-		System.out.println("Class A available");
+		System.out.println("Class A available in memory");
 
 	}
 
 	public ClassA() {
-		System.out.println("Object of class ClassA created");
+		System.out.println("ClassA bean available");
 
 	}
 
 	public ClassA(String message) {
-		this.message=message;
+		this.message = message;
 		System.out.println(message);
 	}
 
@@ -36,7 +36,7 @@ public class ClassA {
 	}
 
 	public void callClassB() {
-	
-		classB.callClassB();
+
+		//classB.callClassB();
 	}
 }

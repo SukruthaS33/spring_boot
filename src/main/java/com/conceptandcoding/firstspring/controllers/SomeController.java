@@ -8,7 +8,7 @@ import com.conceptandcoding.firstspring.lazyunderstanding.ClassA;
 @Component
 public class SomeController {
 
-	private final ClassA classA;
+	ClassA classA;
 
 	@Autowired
 	public SomeController(ClassA classA) {

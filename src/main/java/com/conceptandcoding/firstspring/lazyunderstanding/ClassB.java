@@ -14,7 +14,7 @@ public class ClassB {
 	}
 
 	public ClassB() {
-		System.out.println("Object of class ClassB created");
+		System.out.println("ClassB bean ready");
 	}
 
 	public void callClassB() {
