@@ -1,9 +1,11 @@
 package com.conceptandcoding.firstspring.lazyunderstanding;
 
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
+@Component
+public class Invoice {
 
-public interface Order {
-
+	public Invoice() {
+		System.out.println("invoice created");
+	}
 }

@@ -16,12 +16,12 @@ public class AppConfig {
 //		return new ClassA("Hi ClassA");
 //
 //	}
-
-	@Primary
-	@Bean
-	OnlineOrder createClassOnlineOrder() {// public is not required here as an AM
-		System.out.println("creating class online order bean");
-		return new OnlineOrder();
-
-	}
+//
+//	@Primary
+//	@Bean
+//	OnlineOrder createClassOnlineOrder() {// public is not required here as an AM
+//		System.out.println("creating class online order bean");
+//		return new OnlineOrder();
+//
+//	}
 }
