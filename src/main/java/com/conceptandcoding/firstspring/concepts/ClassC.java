@@ -1,4 +1,4 @@
-package com.conceptandcoding.firstspring.lazyunderstanding;
+package com.conceptandcoding.firstspring.concepts;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;

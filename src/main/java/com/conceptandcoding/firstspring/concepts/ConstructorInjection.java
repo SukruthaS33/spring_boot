@@ -1,4 +1,4 @@
-package com.conceptandcoding.firstspring.lazyunderstanding;
+package com.conceptandcoding.firstspring.concepts;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -15,7 +15,7 @@ public class ConstructorInjection {
 
 	public Invoice invoice;
 
-	 // not at all required
+	 // @Lazy not at all required
 //	@Autowired
 //	public ConstructorInjection(Order order, Invoice invoice) {
 //		this.order = order;

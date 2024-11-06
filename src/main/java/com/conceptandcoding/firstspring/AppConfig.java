@@ -1,15 +1,17 @@
 package com.conceptandcoding.firstspring;
 
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
-import com.conceptandcoding.firstspring.lazyunderstanding.ClassA;
-import com.conceptandcoding.firstspring.lazyunderstanding.OnlineOrder;
+//import com.chatgpt.servlets.MyServlet;
+
+//import com.conceptandcoding.firstspring.concepts.ClassA;
+//import com.conceptandcoding.firstspring.concepts.OnlineOrder;
 @Configuration
 public class AppConfig {
 
-	
 //	@Bean
 //	ClassA createClassABean() {// public is not required here as an AM
 //		System.out.println("creating class A bean");
@@ -24,4 +26,6 @@ public class AppConfig {
 //		return new OnlineOrder();
 //
 //	}
+
+	
 }
