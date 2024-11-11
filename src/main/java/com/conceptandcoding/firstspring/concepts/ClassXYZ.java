@@ -24,7 +24,7 @@ public class ClassXYZ {
 	ClassX classX2;
 
 	public ClassXYZ() {
-		System.out.println("ClassXYZ initialized");
+		System.out.println("ClassXYZ initialized ");
 
 	}
 
