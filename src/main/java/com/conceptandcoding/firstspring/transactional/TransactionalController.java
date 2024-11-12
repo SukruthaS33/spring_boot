@@ -3,8 +3,10 @@ package com.conceptandcoding.firstspring.transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -150,6 +152,43 @@ public class TransactionalController {
 
 		try {
 			if (service.transactionalServiceMethod6()) {
+				return ResponseEntity.status(HttpStatus.OK).body("transactional controller method");
+			} else {
+				System.out.println("transaction has been rolledback");
+			}
+		} catch (Exception e) {
+			System.out.println("some exception occured");
+			e.printStackTrace();
+		}
+
+		return null;
+
+	}
+	
+	@GetMapping(value = "/transactionControllerMethod7")
+	public ResponseEntity<String> checkConnection() {
+
+		try {
+			if (service.checkConnection()) {
+				return ResponseEntity.status(HttpStatus.OK).body("transactional controller method");
+			} else {
+				System.out.println("transaction has been rolledback");
+			}
+		} catch (Exception e) {
+			System.out.println("some exception occured");
+			e.printStackTrace();
+		}
+
+		return null;
+
+	}
+	
+	@GetMapping(value = "/transactionControllerMethod8")
+	public ResponseEntity<String> checkConnectionWithExternalApi(@RequestParam(required=false) String userName) {
+
+		try {
+			System.out.println("userName "+userName);
+			if (service.checkConnectionWithExternalApi(userName)) {
 				return ResponseEntity.status(HttpStatus.OK).body("transactional controller method");
 			} else {
 				System.out.println("transaction has been rolledback");
